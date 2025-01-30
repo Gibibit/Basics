@@ -2,7 +2,8 @@
     "name": "Basics",
     "rootNamespace": "Basics",
     "references": [
-        "GUID:324caed91501a9c47a04ebfd87b68794"
+        "TriInspector",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

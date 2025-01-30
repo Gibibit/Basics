@@ -1,6 +1,7 @@
 using TMPro;
 
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Basics
 {
@@ -14,6 +15,16 @@ namespace Basics
         private void Awake()
         {
             text = GetComponent<TMP_Text>();
+
+            Button button = GetComponentInParent<Button>();
+            if(button && !button.interactable)
+            {
+                SetDisabledColor();
+            }
+            else
+            {
+                SetNormalColor();
+            }
         }
 
         public void SetDisabledColor()

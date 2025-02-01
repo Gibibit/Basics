@@ -16,7 +16,6 @@ namespace Basics
         private void Awake()
         {
             button = GetComponent<Button>();
-
         }
 
         public void DisableInteractable()

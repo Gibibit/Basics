@@ -36,5 +36,20 @@ namespace Basics
         {
             text.color = normalColor;
         }
+
+        private void OnValidate()
+        {
+            text = GetComponent<TMP_Text>();
+
+            Button button = GetComponentInParent<Button>();
+            if(button && !button.interactable)
+            {
+                SetDisabledColor();
+            }
+            else
+            {
+                SetNormalColor();
+            }
+        }
     }
 }

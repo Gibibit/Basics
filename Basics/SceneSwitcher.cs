@@ -8,4 +8,9 @@ public class SceneSwitcher : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(scene);
     }
+
+    public void CloseApplication()
+    {
+        Application.Quit();
+    }
 }

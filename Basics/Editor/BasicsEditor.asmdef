@@ -2,7 +2,7 @@
     "name": "BasicsEditor",
     "rootNamespace": "Basics",
     "references": [
-        "GUID:e896f358efbc7b348af309a48db3a282"
+        "Basics"
     ],
     "includePlatforms": [
         "Editor"

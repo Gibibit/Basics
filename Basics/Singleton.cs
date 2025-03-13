@@ -49,6 +49,16 @@ public abstract class Singleton<T> : Singleton where T : MonoBehaviour
     #region  Methods
     private void Awake()
     {
+        lock(Lock)
+        {
+            if(_instance)
+            {
+                // duplicate instance
+                Debug.LogError($"An instance of {typeof(T)} already exists. Destroying self.");
+                Destroy(gameObject);
+            }
+        }
+
         if(_persistent)
             DontDestroyOnLoad(gameObject);
         OnAwake();

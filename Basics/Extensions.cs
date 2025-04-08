@@ -81,16 +81,19 @@ public static class Extensions
 
     public static Color WithHue(this Color c, float h)
     {
-        float s, v;
-        Color.RGBToHSV(c, out _, out s, out v);
+        Color.RGBToHSV(c, out _, out float s, out float v);
         return Color.HSVToRGB(h, s, v);
     }
 
     public static Color WithMultipliedValue(this Color c, float multi)
     {
-        float h, s, v;
-        Color.RGBToHSV(c, out h, out s, out v);
-        v *= multi;
-        return Color.HSVToRGB(h, s, v);
+        Color.RGBToHSV(c, out float h, out float s, out float v);
+        return Color.HSVToRGB(h, s, v*multi);
+    }
+
+    public static Color WithMultipliedSaturation(this Color c, float multi)
+    {
+        Color.RGBToHSV(c, out float h, out float s, out float v);
+        return Color.HSVToRGB(h, s*multi, v);
     }
 }

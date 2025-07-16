@@ -96,4 +96,10 @@ public static class Extensions
         Color.RGBToHSV(c, out float h, out float s, out float v);
         return Color.HSVToRGB(h, s*multi, v);
     }
+
+    public static Color WithAlpha(this Color c, float a)
+    {
+        c.a = a;
+        return c;
+    }
 }

@@ -1,3 +1,5 @@
+using TriInspector;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,12 +28,11 @@ namespace Basics
         public void SetProgress(float factor)
         {
             factor = Mathf.Clamp01(factor);
-            fill.sizeDelta = new Vector2((factor - 1f)*barWidth, 0f);
+            fill.sizeDelta = new Vector2(factor*barWidth, 0f);
         }
 
         public void SetFillColor(Color color)
         {
-            
             fillImage.color = color;
         }
 

@@ -2,15 +2,18 @@
 
 using UnityEngine;
 
-[CreateAssetMenu]
-public class StatHolder : ScriptableObject
+namespace Basics.Numerics
 {
-    public Stat[] Stats;
-
-    [Serializable]
-    public struct Stat
+    [CreateAssetMenu]
+    public class StatHolder : ScriptableObject
     {
-        public string Name;
-        public float StartingValue;
+        public Stat[] Stats;
+
+        [Serializable]
+        public struct Stat
+        {
+            public string Name;
+            public float StartingValue;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Basics.Numeric
+namespace Basics.Numerics
 {
     public class Modifiers<TKey>
     {

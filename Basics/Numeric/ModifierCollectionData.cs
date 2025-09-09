@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+
+using UnityEngine;
 
 namespace Basics.Numerics
 {
-    public class ModifierCollection<TKey>
+    public class ModifierCollectionData<TKey> : ScriptableObject
     {
         public Dictionary<TKey, List<float>> Values = new();
 

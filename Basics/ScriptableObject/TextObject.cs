@@ -1,7 +1,10 @@
 using UnityEngine;
 
-[CreateAssetMenu]
-public class TextObject : ScriptableObject
+namespace Basics
 {
-    [Multiline] public string text;
+    [CreateAssetMenu(menuName = "Basics/Generic/Text Object")]
+    public class TextObject : ScriptableObject
+    {
+        [Multiline] public string text;
+    }
 }

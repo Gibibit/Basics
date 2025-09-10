@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Basics
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Basics/Generic/Labeled SpritesObject")]
     public class LabeledSpritesObject : ScriptableObject
     {
         public LabeledSprite[] sprites;

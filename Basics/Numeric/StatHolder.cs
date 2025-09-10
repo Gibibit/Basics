@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Basics.Numerics
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName ="Basics/Generic/Stat Holder")]
     public class StatHolder : ScriptableObject
     {
         public Stat[] Stats;

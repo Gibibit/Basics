@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu]
-public class TextsObject : ScriptableObject
+namespace Basics
 {
-    [FormerlySerializedAs("text")]
-    public string[] texts;
+    [CreateAssetMenu(menuName = "Basics/Generic/Texts Object")]
+    public class TextsObject : ScriptableObject
+    {
+        [FormerlySerializedAs("text")]
+        public string[] texts;
+    }
 }

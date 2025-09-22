@@ -51,7 +51,6 @@ public class Hitbox : MonoBehaviour
         {
             hit?.Invoke(other.gameObject);
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)

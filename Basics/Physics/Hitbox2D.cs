@@ -43,7 +43,7 @@ public class Hitbox2D : MonoBehaviour
     {
         if(!_tagHandle.HasValue || other.CompareTag(_tagHandle.Value))
         {
-            Hurtbox hurtbox = other.GetComponent<Hurtbox>();
+            Hurtbox2D hurtbox = other.GetComponent<Hurtbox2D>();
             hurtbox.hit.Invoke(gameObject);
             hit.Invoke(other.gameObject);
         }
@@ -58,7 +58,7 @@ public class Hitbox2D : MonoBehaviour
     {
         if(string.IsNullOrEmpty(_targetTag) || collision.gameObject.CompareTag(_tagHandle.Value))
         {
-            Hurtbox hurtbox = collision.gameObject.GetComponent<Hurtbox>();
+            Hurtbox2D hurtbox = collision.gameObject.GetComponent<Hurtbox2D>();
             hurtbox.hit.Invoke(gameObject);
             hit.Invoke(collision.gameObject);
         }
@@ -73,7 +73,7 @@ public class Hitbox2D : MonoBehaviour
     {
         if(string.IsNullOrEmpty(_targetTag) || collision.gameObject.CompareTag(_tagHandle.Value))
         {
-            Hurtbox hurtbox = collision.gameObject.GetComponent<Hurtbox>();
+            Hurtbox2D hurtbox = collision.gameObject.GetComponent<Hurtbox2D>();
             hurtbox.continuousHit.Invoke(gameObject);
             continuousHit.Invoke(collision.gameObject);
         }
@@ -88,7 +88,7 @@ public class Hitbox2D : MonoBehaviour
     {
         if(string.IsNullOrEmpty(_targetTag) || collision.gameObject.CompareTag(_tagHandle.Value))
         {
-            Hurtbox hurtbox = collision.gameObject.GetComponent<Hurtbox>();
+            Hurtbox2D hurtbox = collision.gameObject.GetComponent<Hurtbox2D>();
             hurtbox.continuousHit.Invoke(gameObject);
             continuousHit.Invoke(collision.gameObject);
         }

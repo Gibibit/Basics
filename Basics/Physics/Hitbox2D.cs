@@ -10,6 +10,7 @@ public class Hitbox2D : MonoBehaviour
 {
     [TagSelector, SerializeField]
     private string _targetTag;
+    public bool hitEnabled = true;
     public bool canHitTerrain;
     public UnityEvent<GameObject> hit;
     public UnityEvent<GameObject> continuousHit;
@@ -41,6 +42,8 @@ public class Hitbox2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(!hitEnabled) return;
+
         if(!_tagHandle.HasValue || other.CompareTag(_tagHandle.Value))
         {
             Hurtbox2D hurtbox = other.GetComponent<Hurtbox2D>();
@@ -56,6 +59,8 @@ public class Hitbox2D : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(!hitEnabled) return;
+
         if(string.IsNullOrEmpty(_targetTag) || collision.gameObject.CompareTag(_tagHandle.Value))
         {
             Hurtbox2D hurtbox = collision.gameObject.GetComponent<Hurtbox2D>();
@@ -71,6 +76,8 @@ public class Hitbox2D : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if(!hitEnabled) return;
+
         if(string.IsNullOrEmpty(_targetTag) || collision.gameObject.CompareTag(_tagHandle.Value))
         {
             Hurtbox2D hurtbox = collision.gameObject.GetComponent<Hurtbox2D>();
@@ -86,6 +93,8 @@ public class Hitbox2D : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if(!hitEnabled) return;
+
         if(string.IsNullOrEmpty(_targetTag) || collision.gameObject.CompareTag(_tagHandle.Value))
         {
             Hurtbox2D hurtbox = collision.gameObject.GetComponent<Hurtbox2D>();

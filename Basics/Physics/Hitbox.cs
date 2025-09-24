@@ -1,3 +1,4 @@
+#if !DISABLE_PHYSICS
 using Basics;
 
 using UnityEngine;
@@ -68,3 +69,4 @@ public class Hitbox : MonoBehaviour
         }
     }
 }
+#endif

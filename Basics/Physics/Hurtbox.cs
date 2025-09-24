@@ -1,3 +1,4 @@
+#if !DISABLE_PHYSICS
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,3 +20,4 @@ public class Hurtbox : MonoBehaviour
     }
 #endif
 }
+#endif

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Basics
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Basics/Generic/LabeledColors")]
     public class LabeledColors : ScriptableObject
     {
         public LabeledColor[] colors;

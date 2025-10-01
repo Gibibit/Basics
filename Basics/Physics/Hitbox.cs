@@ -1,3 +1,4 @@
+#if !DISABLE_PHYSICS
 using Basics;
 
 using UnityEngine;
@@ -51,7 +52,6 @@ public class Hitbox : MonoBehaviour
         {
             hit?.Invoke(other.gameObject);
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -69,3 +69,4 @@ public class Hitbox : MonoBehaviour
         }
     }
 }
+#endif

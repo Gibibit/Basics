@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Basics
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Basics/Generic/Labeled GameObjects")]
     public class LabeledGameObjects : ScriptableObject
     {
         public LabeledGameObject[] gameObjects;

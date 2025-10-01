@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Basics
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Basics/Generic/Labeled Materials")]
     public class LabeledMaterials : ScriptableObject
     {
         public LabeledMaterial[] materials;

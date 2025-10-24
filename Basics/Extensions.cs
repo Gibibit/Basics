@@ -78,4 +78,28 @@ public static class Extensions
         yield return new WaitForSecondsRealtime(seconds);
         Time.timeScale = 1f;
     }
+
+    public static Color WithHue(this Color c, float h)
+    {
+        Color.RGBToHSV(c, out _, out float s, out float v);
+        return Color.HSVToRGB(h, s, v);
+    }
+
+    public static Color WithMultipliedValue(this Color c, float multi)
+    {
+        Color.RGBToHSV(c, out float h, out float s, out float v);
+        return Color.HSVToRGB(h, s, v*multi);
+    }
+
+    public static Color WithMultipliedSaturation(this Color c, float multi)
+    {
+        Color.RGBToHSV(c, out float h, out float s, out float v);
+        return Color.HSVToRGB(h, s*multi, v);
+    }
+
+    public static Color WithAlpha(this Color c, float a)
+    {
+        c.a = a;
+        return c;
+    }
 }

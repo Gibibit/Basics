@@ -4,7 +4,7 @@ using UnityEngine.Events;
 /// <summary>
 /// Collider or trigger that takes hits from Hitboxes
 /// </summary>
-public class Hurtbox : MonoBehaviour
+public class Hurtbox2D : MonoBehaviour
 {
     public UnityEvent<GameObject> hit;
     public UnityEvent<GameObject> continuousHit;

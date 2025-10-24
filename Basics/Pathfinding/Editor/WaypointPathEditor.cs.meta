@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 3f3ac1c6dd6d5eb4498c4a1e1255d1c5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - addWaypointIcon: {fileID: 2800000, guid: dc4a91208989d8c4eb7477b57f037976, type: 3}
+  - deleteWaypointIcon: {fileID: 2800000, guid: 2e2d1b8db2b403a49b347c50ca627e9a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

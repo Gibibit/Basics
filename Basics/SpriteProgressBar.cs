@@ -12,8 +12,8 @@ namespace Basics
 
         private void Awake()
         {
-            barWidth = fill.transform.localScale.x;
-            barHeight = fill.transform.localScale.y;
+            barWidth = background.transform.localScale.x;
+            barHeight = background.transform.localScale.y;
         }
 
         public void SetProgress(float factor)

@@ -54,7 +54,7 @@ public abstract class Singleton<T> : Singleton where T : MonoBehaviour
             if(_instance)
             {
                 // duplicate instance
-                Debug.LogError($"An instance of {typeof(T)} already exists. Destroying self.");
+                Debug.LogWarning($"An instance of {typeof(T)} already exists. Destroying self.");
                 Destroy(gameObject);
             }
         }

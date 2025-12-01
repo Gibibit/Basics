@@ -15,6 +15,18 @@ namespace Basics
             return gameObjects.First(x => x.Label == label).GameObject;
         }
 
+        public bool TryGetGameObject(string label, out GameObject result)
+        {
+            if(gameObjects.Any(x => x.Label == label))
+            {
+                result = GetGameObject(label);
+                return true;
+            }
+
+            result = null;
+            return false;
+        }
+
         [Serializable]
         public struct LabeledGameObject
         {

@@ -1,3 +1,5 @@
+using GluonGui.Dialog;
+
 using System;
 using System.Linq;
 
@@ -13,6 +15,18 @@ namespace Basics
         public Sprite GetSprite(string label)
         {
             return sprites.First(x => x.Label == label).Sprite;
+        }
+
+        public bool TryGetSprite(string label, out Sprite result)
+        {
+            if(sprites.Any(x => x.Label == label))
+            {
+                result = sprites.First(x => x.Label == label).Sprite;
+                return true;
+            }
+
+            result = null;
+            return false;
         }
 
         [Serializable]

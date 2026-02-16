@@ -107,4 +107,10 @@ public static class Extensions
     {
         foreach(T item in items) hashSet.Add(item);
     }
+
+    public static string Capitalize(this string input)
+    {
+        if(string.IsNullOrEmpty(input)) return input;
+        return input[0].ToString().ToUpper() + input[1..];
+    }
 }

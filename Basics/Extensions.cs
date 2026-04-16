@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 using UnityEngine;
 
@@ -101,5 +100,16 @@ public static class Extensions
     {
         c.a = a;
         return c;
+    }
+
+    public static void AddRange<T>(this HashSet<T> hashSet, IEnumerable<T> items)
+    {
+        foreach(T item in items) hashSet.Add(item);
+    }
+
+    public static string Capitalize(this string input)
+    {
+        if(string.IsNullOrEmpty(input)) return input;
+        return input[0].ToString().ToUpper() + input[1..];
     }
 }
